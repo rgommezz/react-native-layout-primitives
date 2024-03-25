@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "example": "yarn workspace react-native-layout-primitives-example",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",

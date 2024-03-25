@@ -1,6 +1,9 @@
 # react-native-layout-primitives
 
-A set of primitive components built on top of View that allow you to supercharge your UI development
+A set of primitive components built on top of `View` that allow you to supercharge your UI development
+
+## Motivation
+If you would like to know the motivation behind this library, check out this piece: [Rethinking Layout Practices](https://www.reactnative.university/blog/rethinking-layout-practices).
 
 ## Installation
 
