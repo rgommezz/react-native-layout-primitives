@@ -1,8 +1,21 @@
 # react-native-layout-primitives
 
+[![npm](https://img.shields.io/npm/v/react-native-layout-primitives?color=brightgreen)](https://www.npmjs.com/package/react-native-layout-primitives)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/react-native-layout-primitives)](https://bundlephobia.com/result?p=react-native-layout-primitives)
+[![supports iOS](https://img.shields.io/badge/iOS-999999.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff)](https://github.com/expo/expo)
+[![supports Android](https://img.shields.io/badge/Android-A4C639.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff)](https://github.com/expo/expo)
+[![supports web](https://img.shields.io/badge/Web-4285F4.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff)](https://github.com/expo/expo)
+[![license MIT](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/rgommezz/react-native-layout-primitives/blob/master/LICENSE)
+
 A set of primitive components built on top of `View` that allow you to supercharge your UI development
 
 ![](./assets/banner.png)
+
+- [Motivation](#motivation)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Motivation
 
