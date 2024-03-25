@@ -11,11 +11,10 @@ npm install react-native-layout-primitives
 ## Usage
 
 ```js
-import { multiply } from 'react-native-layout-primitives';
+import { Stack } from 'react-native-layout-primitives';
 
 // ...
 
-const result = await multiply(3, 7);
 ```
 
 ## Contributing
