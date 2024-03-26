@@ -86,7 +86,9 @@ const App = () => (
 This library exposes 3 Layout components and a useful enum for grid-based spacing.
 
 ### `Stack`
-The primary component to perform layout. It stacks children vertically.
+The primary component to perform layout. It stacks children vertically by default, similar to `View`.
+It extends the `ViewProps` interface, meaning it can take all the props that `View` can. In addition, it exposes
+the following props to control layout:
 
 ```ts
 interface StackProps extends ViewProps {
@@ -112,15 +114,22 @@ interface StackProps extends ViewProps {
 }
 ```
 
+As a last resort, you can always use the `style` prop to pass custom styles.
+
 ### `Row`
-A container that stacks children horizontally. By default it wraps them into multiple lines.
-It presents the same props as the `Stack` component.
+A container that stacks children horizontally. It's syntactic sugar for `Stack` with `direction="row"`.
+By default it wraps them into multiple lines, and presents the same props as the `Stack` component.
 
 ### `AbsoluteStack`
-A container with absolute positioning. Besides all `Stack` props, it presents 4 new ones: `top`, `right`, `bottom` and `left`.
+A container with absolute positioning. It's syntactic sugar for `Stack` with `position="absolute"`.
+Besides all `Stack` props, it presents 4 new ones: `top`, `right`, `bottom` and `left`.
 
 ### `Size`
-A useful enum that follows t-shirt convention.
+A useful enum that follows t-shirt convention. This approached has been favoured over strings ('s', 'm', etc) to allow
+for math operations in special cases, such as:
+- Multiples of a size, like `XXl` or `XXXl` values
+- Adding or subtracting sizes to create custom spacing: `Size.M + Size.Xs`
+
 ```ts
 enum Size {
   None = 0,
