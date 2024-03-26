@@ -3,15 +3,13 @@ import type { StyleProp, ViewStyle } from 'react-native';
 import Stack, { type StackProps } from './Stack';
 
 interface PositionProps {
-  top: number;
-  right: number;
-  bottom: number;
-  left: number;
+  top?: number;
+  right?: number;
+  bottom?: number;
+  left?: number;
 }
 
-const AbsoluteStack: React.FC<StackProps & Partial<PositionProps>> = (
-  props
-) => {
+const AbsoluteStack: React.FC<StackProps & PositionProps> = (props) => {
   const positionStyles: StyleProp<ViewStyle> = {
     position: 'absolute',
     top: props.top,

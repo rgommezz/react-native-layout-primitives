@@ -7,7 +7,7 @@
 [![supports web](https://img.shields.io/badge/Web-4285F4.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff)](https://github.com/expo/expo)
 [![license MIT](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/rgommezz/react-native-layout-primitives/blob/master/LICENSE)
 
-A set of primitive components built on top of `View` that allow you to supercharge your UI development
+A set of primitive components built on top of `View` that allow you to supercharge your UI development.
 
 ![](./assets/banner.png)
 
@@ -19,7 +19,21 @@ A set of primitive components built on top of `View` that allow you to superchar
 
 ## Motivation
 
-If you would like to know the motivation behind this library, check out this piece: [Rethinking Layout Practices](https://www.reactnative.university/blog/rethinking-layout-practices).
+Layout is one of the most overlooked areas of design systems. React Native ships with the `View` component as the foundational block to build user interfaces.
+It is a low-level primitive that offers a lot of flexibility (50+ style props). But when you have that degree of flexibility it's easy to get things messy,
+and it's a breeze to end up with code that:
+
+- Mixes inline styles with `StyleSheet` defined styles
+- Uses arbitrary values ("magic numbers")
+- Disrupts the top-to-bottom flow, due to styles being placed at the bottom of the file
+- Lacks separation of concerns, with `Text` also taking on layout duties through margins
+- Doesn't adhere to design system conventions
+
+This library aims to implement the right abstractions on top of `View`, by fixing all of the problems outlined above,
+and establishing a clear set of rules and guidelines that are backed by some of the most renowned figures in the industry.
+That way you can approach layout with the precision of a designer.
+
+If you appreciate deep dives, you will also enjoy this piece: [Rethinking Layout Practices](https://www.reactnative.university/blog/rethinking-layout-practices).
 
 ## Installation
 
@@ -66,6 +80,57 @@ const App = () => (
     />
   </Stack>
 );
+```
+
+## API
+This library exposes 3 Layout components and a useful enum for grid-based spacing.
+
+### `Stack`
+The primary component to perform layout. It stacks children vertically.
+
+```ts
+interface StackProps extends ViewProps {
+  flex?: number;
+  direction?: FlexStyle['flexDirection'];
+  padding?:
+    | GridValue
+    | [GridValue]
+    | [GridValue, GridValue]
+    | [GridValue, GridValue, GridValue, GridValue];
+  spacing?: GridValue;
+  justify?: FlexStyle['justifyContent'];
+  align?: FlexStyle['alignItems'];
+  wrap?: FlexStyle['flexWrap'];
+  borderRadius?: number;
+  background?: string;
+  grow?: number;
+  shrink?: number;
+  basis?: number;
+  width?: number | DimensionValue;
+  height?: number | DimensionValue;
+  children?: React.ReactNode;
+}
+```
+
+### `Row`
+A container that stacks children horizontally. By default it wraps them into multiple lines.
+It presents the same props as the `Stack` component.
+
+### `AbsoluteStack`
+A container with absolute positioning. Besides all `Stack` props, it presents 4 new ones: `top`, `right`, `bottom` and `left`.
+
+### `Size`
+A useful enum that follows t-shirt convention.
+```ts
+enum Size {
+  None = 0,
+  Xs = 4,
+  S = 8,
+  M = 16,
+  L = 24,
+  Xl = 32,
+}
+
 ```
 
 ## Contributing
