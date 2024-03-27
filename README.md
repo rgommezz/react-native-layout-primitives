@@ -25,7 +25,7 @@ and it's a breeze to end up with code that:
 
 - Mixes inline styles with `StyleSheet` defined styles
 - Uses arbitrary values ("magic numbers")
-- Margins, the devil of layout
+- It's full of margins, the devil of layout
 - Disrupts the top-to-bottom flow, due to styles being placed at the bottom of the file
 - Lacks separation of concerns, with `Text` also taking on layout duties
 - Doesn't adhere to design system conventions
@@ -39,7 +39,7 @@ and establishing a clear set of rules and guidelines that are backed by some of 
   
 That way you can approach layout with the precision of a designer.
 
-If you appreciate deep dives, you will also enjoy this piece: [Rethinking Layout Practices](https://www.reactnative.university/blog/rethinking-layout-practices).
+If you appreciate deep dives, you will also enjoy this piece: [**Rethinking Layout Practices**](https://www.reactnative.university/blog/rethinking-layout-practices).
 
 ## Installation
 
