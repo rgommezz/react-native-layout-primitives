@@ -60,7 +60,7 @@ export default function App() {
             background="orange"
             justify="center"
             padding={Size.S}
-            spacing={Size.Xs}
+            spacing={Size.XS}
           >
             <Text>Hello</Text>
             <Text>World</Text>
@@ -74,7 +74,7 @@ export default function App() {
             borderRadius={Size.S}
           />
         </Row>
-        <Row flex={1} background="gray" padding={Size.Xl} spacing={Size.L}>
+        <Row flex={1} background="gray" padding={Size.XS} spacing={Size.L}>
           <Stack grow={1}>
             <Button />
           </Stack>
