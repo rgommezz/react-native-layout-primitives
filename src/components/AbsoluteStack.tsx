@@ -1,6 +1,7 @@
 import * as React from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import Stack, { type StackProps } from './Stack';
+import type { PropsWithChildren } from 'react';
 
 interface PositionProps {
   top?: number;
@@ -9,7 +10,9 @@ interface PositionProps {
   left?: number;
 }
 
-const AbsoluteStack: React.FC<StackProps & PositionProps> = (props) => {
+const AbsoluteStack = (
+  props: PropsWithChildren<StackProps & PositionProps>
+) => {
   const positionStyles: StyleProp<ViewStyle> = {
     position: 'absolute',
     top: props.top,

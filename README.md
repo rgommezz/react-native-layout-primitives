@@ -25,12 +25,18 @@ and it's a breeze to end up with code that:
 
 - Mixes inline styles with `StyleSheet` defined styles
 - Uses arbitrary values ("magic numbers")
+- Margins, the devil of layout
 - Disrupts the top-to-bottom flow, due to styles being placed at the bottom of the file
-- Lacks separation of concerns, with `Text` also taking on layout duties through margins
+- Lacks separation of concerns, with `Text` also taking on layout duties
 - Doesn't adhere to design system conventions
 
 This library aims to implement the right abstractions on top of `View`, by fixing all of the problems outlined above,
-and establishing a clear set of rules and guidelines that are backed by some of the most renowned figures in the industry.
+and establishing a clear set of rules and guidelines that are backed by some of the most renowned figures in the industry:
+
+- **Components should be free of surrounding white space.**
+- **Layout components take ownership of white space.**
+- **Margins are forbidden, with the exception of negative ones.**
+  
 That way you can approach layout with the precision of a designer.
 
 If you appreciate deep dives, you will also enjoy this piece: [Rethinking Layout Practices](https://www.reactnative.university/blog/rethinking-layout-practices).

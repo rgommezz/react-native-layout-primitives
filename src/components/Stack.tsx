@@ -32,7 +32,7 @@ export interface StackProps extends ViewProps {
   children?: React.ReactNode;
 }
 
-const Stack: React.FC<StackProps> = ({
+const Stack = ({
   flex,
   direction = 'column',
   borderRadius,
