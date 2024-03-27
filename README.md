@@ -106,7 +106,7 @@ Additionally, it introduces the following properties to control layout:
 ```ts
 
 // See the `Size` enum for possible values
-type `GridValue` = `Size` | 0
+type GridValue = Size | 0
 
 interface StackProps extends ViewProps {
   flex?: number;
