@@ -29,19 +29,19 @@ Layout is one of the most overlooked aspects of design systems. React Native pro
 building block for user interfaces. This low-level primitive offers significant flexibility, including over 50 style properties.
 However, when you have that many options it's a breeze to end up with messy code, characterized by:
 
-- Mixing inline styles with styles defined in `StyleSheet`.
+- Mixing inline styles with styles defined in `StyleSheet`
 - Utilizing arbitrary values, or "magic numbers."
 - An over reliance on margins, the devil of layout
-- Disrupting the natural top-to-bottom flow due to styles being placed at the bottom of the file.
-- A lack of separation of concerns, with the `Text` component also handling layout responsibilities.
-- Non-adherence to design system conventions.
+- Disrupting the natural top-to-bottom flow due to styles being placed at the bottom of the file
+- A lack of separation of concerns, with the `Text` component also handling layout responsibilities
+- Non-adherence to design system conventions
 
 This library aims to introduce the right abstractions on top of `View` to address these issues,
 establishing clear rules and guidelines supported by industry-leading experts:
 
-- **Components should be free of surrounding white space.**
-- **Layout components are responsible for managing whitespace.**
-- **The use of margins is generally prohibited, except for negative margins.**
+- **Components should be free of surrounding white space**
+- **Layout components are responsible for managing whitespace**
+- **The use of margins is generally prohibited, except for negative margins**
 
 These principles let you approach layout with the precision of a designer.
 
