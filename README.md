@@ -25,27 +25,28 @@ A set of primitive components built on top of `View` that allow you to superchar
 
 ## Motivation
 
-Layout is one of the most overlooked areas of design systems. React Native ships with the `View` component as the foundational block to build user interfaces.
-It is a low-level primitive that offers a lot of flexibility (50+ style props). But when you have that degree of flexibility it's easy to get things messy,
+Layout is one of the most overlooked aspects of design systems. React Native provides the `View` component as the foundational building block for user interfaces.
+This low-level primitive offers significant flexibility, including over 50 style properties.
+But when you have that many options it's easy to get things messy,
 and it's a breeze to end up with code that:
 
-- Mixes inline styles with `StyleSheet` defined styles
-- Uses arbitrary values ("magic numbers")
-- It's full of margins, the devil of layout
-- Disrupts the top-to-bottom flow, due to styles being placed at the bottom of the file
-- Lacks separation of concerns, with `Text` also taking on layout duties
-- Doesn't adhere to design system conventions
+- Mixing inline styles with styles defined in `StyleSheet`.
+- Utilizing arbitrary values, or "magic numbers."
+- An over reliance on margins, the devil of layout
+- Disrupting the natural top-to-bottom flow due to styles being placed at the bottom of the file.
+- A lack of separation of concerns, with the `Text` component also handling layout responsibilities.
+- Non-adherence to design system conventions.
 
-This library aims to implement the right abstractions on top of `View`, by fixing all of the problems outlined above,
-and establishing a clear set of rules and guidelines that are backed by some of the most renowned figures in the industry:
+This library aims to introduce the right abstractions on top of `View` to address these issues,
+establishing clear rules and guidelines supported by industry-leading experts:
 
 - **Components should be free of surrounding white space.**
-- **Layout components take ownership of white space.**
-- **Margins are forbidden, with the exception of negative ones.**
-  
-That way you can approach layout with the precision of a designer.
+- **Layout components are responsible for managing whitespace.**
+- **The use of margins is generally prohibited, except for negative margins.**
 
-If you appreciate deep dives, you will also enjoy this piece: [**Rethinking Layout Practices**](https://www.reactnative.university/blog/rethinking-layout-practices).
+These principles let you approach layout with the precision of a designer.
+
+For those interested in exploring these concepts further, the article [**Rethinking Layout Practices**](https://www.reactnative.university/blog/rethinking-layout-practices) provides an in-depth analysis.
 
 ## Installation
 
@@ -95,14 +96,19 @@ const App = () => (
 ```
 
 ## API
-This library exposes 3 Layout components and a useful enum for grid-based spacing.
+This library provides three layout components and a valuable enum for grid-based spacing.
 
 ### `Stack`
-The primary component to perform layout. It stacks children vertically by default, similar to `View`.
-It extends the `ViewProps` interface, meaning it can take all the props that `View` can. In addition, it exposes
-the following props to control layout:
+
+The `Stack` component is essential for layout tasks, stacking children vertically by default, akin to the `View` component.
+It extends the `ViewProps` interface, allowing it to accept all the properties available to `View`.
+Additionally, it introduces the following properties to control layout:
 
 ```ts
+
+// See the `Size` enum for possible values
+type `GridValue` = `Size` | 0
+
 interface StackProps extends ViewProps {
   flex?: number;
   direction?: FlexStyle['flexDirection'];
@@ -129,18 +135,19 @@ interface StackProps extends ViewProps {
 As a last resort, you can always use the `style` prop to pass custom styles.
 
 ### `Row`
-A container that stacks children horizontally. It's syntactic sugar for `Stack` with `direction="row"`.
-By default it wraps them into multiple lines, and presents the same props as the `Stack` component.
+A container that stacks children horizontally. It serves as syntactic sugar for a `Stack` with `direction="row"`.
+By default, it wraps them into multiple lines and offers the same properties as the `Stack` component.
 
 ### `AbsoluteStack`
-A container with absolute positioning. It's syntactic sugar for `Stack` with `position="absolute"`.
-Besides all `Stack` props, it presents 4 new ones: `top`, `right`, `bottom` and `left`.
+A container with absolute positioning. It serves as syntactic sugar for `Stack` with `position="absolute"`.
+In addition to all `Stack` properties, it introduces four new ones: `top`, `right`, `bottom`, and `left`.
 
 ### `Size`
-A useful enum that follows t-shirt convention. This approached has been favoured over strings ('s', 'm', etc) to allow
-for math operations in special cases, such as:
-- Multiples of a size, like `XXl` or `XXXl` values
-- Adding or subtracting sizes to create custom spacing: `Size.M + Size.Xs`
+
+`Size` is a practical numerical enum that adopts the t-shirt sizing convention. This approach is preferred over using strings, like
+`m` or `s`, because it enables mathematical operations in specific scenarios, such as:
+- Creating multiples of a size, indicated by values like `XXl` or `XXXl`.
+- Adding or subtracting sizes to devise custom spacing, exemplified by `Size.M + Size.Xs`.
 
 ```ts
 enum Size {
