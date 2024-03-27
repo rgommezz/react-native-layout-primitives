@@ -69,13 +69,13 @@ const App = () => (
       <Row align="center" padding={Size.S}>
         <Text>Foo</Text>
       </Row>
-      <Stack justify="center" padding={Size.S} spacing={Size.Xs}>
+      <Stack justify="center" padding={Size.S} spacing={Size.XS}>
         <Text>Hello</Text>
         <Text>World</Text>
       </Stack>
       <Stack width="100%" height={100} background="red" borderRadius={Size.S} />
     </Row>
-    <Row flex={1} background="gray" padding={Size.Xl} spacing={Size.L}>
+    <Row flex={1} background="gray" padding={Size.XL} spacing={Size.L}>
       <Stack grow={1}>
         <Button />
       </Stack>
@@ -145,17 +145,17 @@ In addition to all `Stack` properties, it introduces four new ones: `top`, `righ
 
 `Size` is a practical numerical enum that adopts the t-shirt sizing convention. This approach is preferred over using strings, like
 `m` or `s`, because it enables mathematical operations in specific scenarios, such as:
-- Creating multiples of a size, indicated by values like `XXl` or `XXXl`.
-- Adding or subtracting sizes to devise custom spacing, exemplified by `Size.M + Size.Xs`.
+- Creating multiples of a size, indicated by values like `XXL` or `XXXL`.
+- Adding or subtracting sizes to devise custom spacing, exemplified by `Size.M + Size.XS`.
 
 ```ts
 enum Size {
   None = 0,
-  Xs = 4,
+  XS = 4,
   S = 8,
   M = 16,
   L = 24,
-  Xl = 32,
+  XL = 32,
 }
 
 ```
