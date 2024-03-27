@@ -7,7 +7,7 @@
 [![supports web](https://img.shields.io/badge/Web-4285F4.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff)](https://github.com/expo/expo)
 [![license MIT](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/rgommezz/react-native-layout-primitives/blob/master/LICENSE)
 
-A set of primitive components built on top of `View` that allow you to supercharge your UI development.
+A collection of layout components based on `View` designed to supercharge your UI development process.
 
 ![](./assets/banner.png)
 
@@ -25,10 +25,9 @@ A set of primitive components built on top of `View` that allow you to superchar
 
 ## Motivation
 
-Layout is one of the most overlooked aspects of design systems. React Native provides the `View` component as the foundational building block for user interfaces.
-This low-level primitive offers significant flexibility, including over 50 style properties.
-But when you have that many options it's easy to get things messy,
-and it's a breeze to end up with code that:
+Layout is one of the most overlooked aspects of design systems. React Native provides the `View` component as the foundational
+building block for user interfaces. This low-level primitive offers significant flexibility, including over 50 style properties.
+However, when you have that many options it's a breeze to end up with messy code, characterized by:
 
 - Mixing inline styles with styles defined in `StyleSheet`.
 - Utilizing arbitrary values, or "magic numbers."
