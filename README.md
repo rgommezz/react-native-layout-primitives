@@ -14,6 +14,12 @@ A set of primitive components built on top of `View` that allow you to superchar
 - [Motivation](#motivation)
 - [Installation](#installation)
 - [Usage](#usage)
+- [API](#api)
+  - [`Stack`](#stack)
+  - [`Row`](#row)
+  - [`AbsoluteStack`](#absolutestack)
+  - [`Size`](#size)
+- [Example](#example)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -147,6 +153,17 @@ enum Size {
 }
 
 ```
+
+## Example
+You can play with the Expo example app in the `example` folder. To run it, follow these steps:
+
+```sh
+cd example
+npm install
+npm start
+```
+
+Alternatively, you can run the example app in the browser by visiting this [snack link](https://snack.expo.dev/@rgommezz/react-native-layout-primitives-example).
 
 ## Contributing
 
