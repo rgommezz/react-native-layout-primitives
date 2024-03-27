@@ -1,6 +1,6 @@
 {
   "name": "react-native-layout-primitives",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of primitive components built on top of View that allow you to supercharge your UI development",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
